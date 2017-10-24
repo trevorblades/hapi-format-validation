@@ -1,4 +1,5 @@
 const Boom = require('boom');
+const getErrorParts = require('./get-error-parts');
 
 module.exports = (errors, options, source = 'payload') => {
   const validation = {
@@ -7,13 +8,7 @@ module.exports = (errors, options, source = 'payload') => {
   };
 
   const messages = errors.map(error => {
-    const path = Array.isArray(error.path) ? error.path[0] : error.path;
-    const pathPattern = new RegExp(`^${path}\\s`);
-    let message = error.message.replace(pathPattern, `"${path}"$1`);
-    if (options.stripQuotes) {
-      message = message.replace(/"/g, '');
-    }
-
+    const {path, message} = getErrorParts(error);
     validation.errors[path] = message;
     return message;
   });
