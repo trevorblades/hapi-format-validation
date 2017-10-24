@@ -1,6 +1,6 @@
 {
   "name": "hapi-format-validation",
-  "version": "1.4.0",
+  "version": "2.0.0",
   "description": "Formats Joi and Sequelize errors in Hapi",
   "main": "index.js",
   "scripts": {
