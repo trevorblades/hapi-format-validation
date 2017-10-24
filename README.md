@@ -2,9 +2,9 @@
 
 [![CircleCI](https://circleci.com/gh/trevorblades/hapi-format-validation.svg?style=shield&circle-token=9f50f0c56ba5d9a3097af294415b5603fde2a119)](https://circleci.com/gh/trevorblades/hapi-format-validation)
 
-This Hapi plugin formats validation errors in a way that is consistent, simple, and easy to render in client-side forms. Take your typical Joi validation error reply...
+This Hapi plugin formats validation errors in a way that is consistent, simple, and easy to render in client-side forms. Take your typical [Joi](https://github.com/hapijs/joi) validation error reply for instance...
 
-#### Before `hapi-format-validation`
+#### 😿 Before `hapi-format-validation`
 
 ```js
 {
@@ -23,7 +23,7 @@ This Hapi plugin formats validation errors in a way that is consistent, simple, 
 }
 ```
 
-#### After `hapi-format-validation`
+#### 😍 After `hapi-format-validation`
 
 ```js
 {
@@ -63,7 +63,7 @@ server.register(FormatValidation, err => {
 
 ## Sequelize integration
 
-`hapi-format-validation` also handles Sequelize unique key violation errors, which would otherwise be a `500 Internal Server Error`. Pass your Sequelize instance (sold separately) as an option to the plugin when you register it to enable this feature.
+`hapi-format-validation` also handles Sequelize unique key violation errors, which would otherwise be a `500 Internal Server Error`. Pass your Sequelize instance ([sold separately](http://docs.sequelizejs.com/)) as an option to the plugin when you register it to enable this feature.
 
 ```js
 const FormatValidation = require('hapi-format-validation');
@@ -107,3 +107,8 @@ server.register(
   }
 }
 ```
+
+## 👊 Acknowledgements
+
+- [joi-errors-for-forms](https://github.com/eddyystop/joi-errors-for-forms) for the validation payload format inspiration
+- [This article](https://medium.com/@andv/hapi-transforming-an-internal-server-error-occured-into-correct-boom-errors-1a2a72e6ffff) by [Andrey Viktorov](https://medium.com/@andv) for the idea around using the `onPreResponse` hook and checking for Sequelize errors
