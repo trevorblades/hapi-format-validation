@@ -34,6 +34,18 @@ describe('getErrorParts', () => {
     });
   });
 
+  test("adds quotes if a path doesn't have them", () => {
+    const error = {
+      path: 'username',
+      message: 'username must be unique'
+    };
+
+    expect(getErrorParts(error)).toEqual({
+      path: error.path,
+      message: '"username" must be unique'
+    });
+  });
+
   test("doesn't pass along other properties", () => {
     const error = {
       path: 'password',
