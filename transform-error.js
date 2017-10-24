@@ -1,4 +1,3 @@
-const Sequelize = require('sequelize');
 const formatErrors = require('./format-errors');
 
 module.exports = (error, options) => {
@@ -11,7 +10,6 @@ module.exports = (error, options) => {
   } else if (
     error.isServer &&
     options.sequelize &&
-    options.sequelize instanceof Sequelize &&
     error instanceof options.sequelize.UniqueConstraintError
   ) {
     return formatErrors(error.errors, options);

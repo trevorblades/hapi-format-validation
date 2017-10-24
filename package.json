@@ -32,7 +32,6 @@
     "eslint-config-knoword": "^5.1.0"
   },
   "dependencies": {
-    "boom": "^6.0.0",
-    "sequelize": "^4.17.0"
+    "boom": "^6.0.0"
   }
 }
