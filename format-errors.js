@@ -7,12 +7,13 @@ module.exports = (errors, options, source = 'payload') => {
   };
 
   const messages = errors.map(error => {
-    let {message} = error;
+    const path = Array.isArray(error.path) ? error.path[0] : error.path;
+    const pathPattern = new RegExp(`/^${path}\\s/`);
+    let message = error.message.replace(pathPattern, `"${path}"`);
     if (options.stripQuotes) {
       message = message.replace(/"/g, '');
     }
 
-    const path = Array.isArray(error.path) ? error.path[0] : error.path;
     validation.errors[path] = message;
     return message;
   });
