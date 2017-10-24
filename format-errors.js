@@ -9,7 +9,7 @@ module.exports = (errors, options, source = 'payload') => {
   const messages = errors.map(error => {
     const path = Array.isArray(error.path) ? error.path[0] : error.path;
     const pathPattern = new RegExp(`^${path}\\s`);
-    let message = error.message.replace(pathPattern, `"${path}"`);
+    let message = error.message.replace(pathPattern, `"${path}"$1`);
     if (options.stripQuotes) {
       message = message.replace(/"/g, '');
     }
