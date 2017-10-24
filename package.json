@@ -1,0 +1,38 @@
+{
+  "name": "hapi-format-validation",
+  "version": "1.0.0",
+  "description": "Formats Joi and Sequelize errors in Hapi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trevorblades/hapi-format-validation.git"
+  },
+  "keywords": [
+    "hapi",
+    "joi",
+    "sequelize",
+    "format",
+    "errors",
+    "validation"
+  ],
+  "author": {
+    "name": "Trevor Blades",
+    "email": "tdblades@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/trevorblades/hapi-format-validation/issues"
+  },
+  "homepage": "https://github.com/trevorblades/hapi-format-validation#readme",
+  "devDependencies": {
+    "eslint": "^4.9.0",
+    "eslint-config-knoword": "^5.1.0"
+  },
+  "dependencies": {
+    "boom": "^6.0.0",
+    "sequelize": "^4.17.0"
+  }
+}
