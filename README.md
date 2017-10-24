@@ -23,7 +23,7 @@ This Hapi plugin formats validation errors in a way that is consistent, simple, 
 }
 ```
 
-#### After `hapi-format-validation`:
+#### After `hapi-format-validation`
 
 ```js
 {
@@ -58,8 +58,8 @@ server.register(FormatValidation, err => {
 
 ## Options
 
-- `stripQuotes` - (optional) if `true`, strips double quotation marks from around the path name in error messages
-- `sequelize` - (optional) pass a `Sequelize` instance to format unique key violations (more information below)
+- `stripQuotes`: (optional) if `true`, strips double quotation marks from around the path name in error messages
+- `sequelize`: (optional) pass a `Sequelize` instance to format unique key violations (more information below)
 
 ## Sequelize integration
 
