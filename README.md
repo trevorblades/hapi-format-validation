@@ -59,6 +59,7 @@ server.register(FormatValidation, err => {
 ## Options
 
 - `stripQuotes`: (optional) if `true`, strips double quotation marks from around the path name in error messages
+- `upperFirst`: (optional) if `true`, capitalizes the first letter of each error message
 - `sequelize`: (optional) pass a `Sequelize` instance to format unique key violations (more information below)
 
 ## Sequelize integration

@@ -33,6 +33,7 @@
     "jest": "^21.2.1"
   },
   "dependencies": {
-    "boom": "^6.0.0"
+    "boom": "^6.0.0",
+    "lodash.upperfirst": "^4.3.1"
   }
 }

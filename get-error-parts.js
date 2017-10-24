@@ -1,12 +1,20 @@
-module.exports = (error, options) => {
+const upperFirst = require('lodash.upperfirst');
+
+module.exports = (error, options = {}) => {
   const path = Array.isArray(error.path) ? error.path[0] : error.path;
-  const pathPattern = new RegExp(`^${path}\\b`);
-  const message = error.message.replace(pathPattern, `"${path}"`);
-  if (options && options.stripQuotes) {
-    return {
-      path,
-      message: message.replace(/"/g, '')
-    };
+  let message = error.message.replace(/"/g, '');
+  if (options.upperFirst) {
+    message = upperFirst(message);
   }
-  return {path, message};
+
+  if (!options.stripQuotes) {
+    // if stripQuotes is falsey, put the quotes back
+    const pathPattern = new RegExp(`^(${path})\\b`, 'i');
+    message = message.replace(pathPattern, `"$1"`);
+  }
+
+  return {
+    path,
+    message
+  };
 };

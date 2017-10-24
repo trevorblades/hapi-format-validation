@@ -22,6 +22,18 @@ describe('getErrorParts', () => {
     });
   });
 
+  test("adds quotes around the path in a message if it doesn't have them", () => {
+    const error = {
+      path: 'username',
+      message: 'username must be unique'
+    };
+
+    expect(getErrorParts(error)).toEqual({
+      path: error.path,
+      message: '"username" must be unique'
+    });
+  });
+
   test('strips quotes', () => {
     const error = {
       path: 'username',
@@ -34,15 +46,32 @@ describe('getErrorParts', () => {
     });
   });
 
-  test("adds quotes if a path doesn't have them", () => {
+  test('capitalizes the first letter of a message', () => {
     const error = {
       path: 'username',
-      message: 'username must be unique'
+      message: '"username" must be unique'
     };
 
-    expect(getErrorParts(error)).toEqual({
+    expect(getErrorParts(error, {upperFirst: true})).toEqual({
       path: error.path,
+      message: '"Username" must be unique'
+    });
+  });
+
+  test('capitalizes the first letter of a message with no quotes', () => {
+    const error = {
+      path: 'username',
       message: '"username" must be unique'
+    };
+
+    expect(
+      getErrorParts(error, {
+        stripQuotes: true,
+        upperFirst: true
+      })
+    ).toEqual({
+      path: error.path,
+      message: 'Username must be unique'
     });
   });
 

@@ -1,6 +1,6 @@
 const transformError = require('./transform-error');
 
-exports.register = (server, options, next) => {
+exports.register = (server, options = {}, next) => {
   server.ext('onPreResponse', (request, reply) => {
     if (request.response.isBoom) {
       reply(transformError(request.response, options));
