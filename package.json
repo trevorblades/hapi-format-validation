@@ -29,7 +29,8 @@
   "homepage": "https://github.com/trevorblades/hapi-format-validation#readme",
   "devDependencies": {
     "eslint": "^4.9.0",
-    "eslint-config-knoword": "^5.1.0"
+    "eslint-config-knoword": "^5.1.0",
+    "jest": "^21.2.1"
   },
   "dependencies": {
     "boom": "^6.0.0"
