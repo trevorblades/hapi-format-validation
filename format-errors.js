@@ -8,7 +8,7 @@ module.exports = (errors, options, source = 'payload') => {
   };
 
   const messages = errors.map(error => {
-    const {path, message} = getErrorParts(error);
+    const {path, message} = getErrorParts(error, options);
     validation.errors[path] = message;
     return message;
   });
