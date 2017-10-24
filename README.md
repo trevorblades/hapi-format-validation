@@ -63,7 +63,7 @@ server.register(FormatValidation, err => {
 
 ## Sequelize integration
 
-`hapi-format-validation` also handles Sequelize unique key violation errors, which would otherwise be a `500 Internal Server Error`. Pass your Sequelize instance ([sold separately](http://docs.sequelizejs.com/)) as an option to the plugin when you register it to enable this feature.
+`hapi-format-validation` also handles Sequelize unique key violation errors, which would otherwise be a `500 Internal Server Error`. Pass your `Sequelize` instance ([sold separately](http://docs.sequelizejs.com/)) as an option to the plugin when you register it to enable this feature.
 
 ```js
 const FormatValidation = require('hapi-format-validation');
