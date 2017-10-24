@@ -4,7 +4,7 @@
 
 This [Hapi](https://hapijs.com/) plugin formats validation errors in a way that is consistent, simple, and easy to render in client-side forms. Take your typical [Joi](https://github.com/hapijs/joi) validation error reply for instance...
 
-#### 😿 Before `hapi-format-validation`
+#### Before `hapi-format-validation` 😿
 
 ```js
 {
@@ -23,7 +23,7 @@ This [Hapi](https://hapijs.com/) plugin formats validation errors in a way that 
 }
 ```
 
-#### 😍 After `hapi-format-validation`
+#### After `hapi-format-validation` 😍
 
 ```js
 {
