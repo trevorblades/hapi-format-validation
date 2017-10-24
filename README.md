@@ -2,7 +2,7 @@
 
 [![CircleCI](https://circleci.com/gh/trevorblades/hapi-format-validation.svg?style=shield&circle-token=9f50f0c56ba5d9a3097af294415b5603fde2a119)](https://circleci.com/gh/trevorblades/hapi-format-validation)
 
-This Hapi plugin formats validation errors in a way that is consistent, simple, and easy to render in client-side forms. Take your typical [Joi](https://github.com/hapijs/joi) validation error reply for instance...
+This [Hapi](https://hapijs.com/) plugin formats validation errors in a way that is consistent, simple, and easy to render in client-side forms. Take your typical [Joi](https://github.com/hapijs/joi) validation error reply for instance...
 
 #### 😿 Before `hapi-format-validation`
 
