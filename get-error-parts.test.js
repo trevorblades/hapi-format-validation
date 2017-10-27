@@ -52,7 +52,7 @@ describe('getErrorParts', () => {
       message: '"username" must be unique'
     };
 
-    expect(getErrorParts(error, {upperFirst: true})).toEqual({
+    expect(getErrorParts(error, {capitalize: true})).toEqual({
       path: error.path,
       message: '"Username" must be unique'
     });
@@ -67,7 +67,7 @@ describe('getErrorParts', () => {
     expect(
       getErrorParts(error, {
         stripQuotes: true,
-        upperFirst: true
+        capitalize: true
       })
     ).toEqual({
       path: error.path,
