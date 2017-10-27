@@ -3,7 +3,7 @@ const upperFirst = require('lodash.upperfirst');
 module.exports = (error, options = {}) => {
   const path = Array.isArray(error.path) ? error.path[0] : error.path;
   let message = error.message.replace(/"/g, '');
-  if (options.upperFirst) {
+  if (options.capitalize) {
     message = upperFirst(message);
   }
 
