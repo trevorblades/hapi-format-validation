@@ -111,7 +111,7 @@ server.register(
 }
 ```
 
-## 👊 Acknowledgements
+## Acknowledgements 👊
 
 - [joi-errors-for-forms](https://github.com/eddyystop/joi-errors-for-forms) for the validation payload format inspiration
 - [This article](https://medium.com/@andv/hapi-transforming-an-internal-server-error-occured-into-correct-boom-errors-1a2a72e6ffff) by [Andrey Viktorov](https://medium.com/@andv) for the idea around using the `onPreResponse` hook and checking for Sequelize errors
