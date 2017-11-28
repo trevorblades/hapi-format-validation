@@ -44,7 +44,9 @@ This [Hapi](https://hapijs.com/) plugin formats validation errors in a way that 
 
 ## Installation
 
-`npm install --save hapi-format-validation`
+```
+npm install --save hapi-format-validation
+```
 
 ## Usage
 
