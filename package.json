@@ -1,6 +1,6 @@
 {
   "name": "hapi-format-validation",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "description": "Formats validation errors in Hapi",
   "main": "index.js",
   "scripts": {
